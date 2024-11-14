@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000; /* Black background */
+    display: flex;
+    justify-content: center; /* Center the layout */
+    align-items: center; /* Center the layout vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+.container {
+    display: flex; /* Create a flex container */
+    max-width: 1200px; /* Limit maximum width */
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Subtle glow around container */
+    border-radius: 15px; /* Softer edges for the container */
+    overflow: hidden; /* Prevent overflow from content */
+    position: absolute;
+    top: 3%;
+}
+
+.form {
+    background-color: #0f0f0f; /* Dark background for the form */
+    padding: 40px; /* Increased padding for a more spacious look */
+    border-radius: 15px; /* Softer edges */
+    width: 100%;
+    max-width: 400px; /* Set the form width */
+    text-align: center; /* Center the form content */
+    margin-right: 20px; /* Space between form and video */
+}
+
+.form h1 {
+    color: #ffffff; /* White text for contrast */
+    margin-bottom: 20px; /* Spacing below the header */
+    font-size: 28px;
+}
+
+.form label {
+    display: block;
+    color: #ffffff; /* White text for labels */
+    margin-bottom: 10px;
+    text-align: left; /* Left-align text */
+    font-size: 14px;
+}
+
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="date"],
+.form select,
+.form textarea {
+    width: 100%;
+    padding: 15px;
+    border: none; /* No border for a cleaner look */
+    border-radius: 5px; /* Softer edges */
+    margin-bottom: 20px;
+    background-color: #1e1e1e; /* Darker input field background */
+    color: #ffffff; /* White text for better contrast */
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.2); /* Subtle glow on input fields */
+    transition: box-shadow 0.3s ease; /* Smooth transition for focus effect */
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Stronger neon glow on focus */
+}
+
+.form button {
+    background-color: #00ffff; /* Neon cyan button */
+    color: #000000; /* Dark text on button for contrast */
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s; /* Smooth transition */
+}
+
+.form button:hover {
+    background-color: #00cccc; /* Darken button on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.video-container {
+    flex: 1; /* Take remaining space */
+    display: flex; /* Center the video */
+    justify-content: center; /* Center video horizontally */
+    align-items: center; /* Center video vertically */
+    position: relative;
+    width: 50%; /* Take half the width */
+    right: 0%;
+    top: 100%;
+}
+
+.video-container video {
+    width: 100%; /* Responsive video */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Softer edges */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Subtle glow effect */
+}
+
+.login-container {
+    position: absolute; /* Position relative to video container */
+    bottom: 10%; /* Adjust based on preference */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centering trick */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 20px; /* Padding for inner spacing */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center align text */
+}
+
+.login-container h2 {
+    color: #ffffff; /* White text for contrast */
+    margin-bottom: 10px; /* Spacing below the header */
+}
+
+.login-btn {
+    background-color: #00ffff; /* Neon cyan button */
+    color: #000000; /* Dark text on button for contrast */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for buttons */
+    transition: background-color 0.3s ease; /* Transition effect */
+    margin: 5px 0; /* Spacing between buttons */
+    width: 100%; /* Full width */
+}
+
+.login-btn:hover {
+    background-color: #00cccc; /* Darken button on hover */
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Stack form and video on small screens */
+    }
+
+    .form {
+        margin-right: 0; /* Remove margin on small screens */
+        margin-bottom: 20px; /* Add space below the form */
+    }
+
+    .video-container video {
+        margin-top: 20px; /* Space between stacked elements */
+    }
+}

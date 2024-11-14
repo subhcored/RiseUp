@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css"> <!-- Link to CSS file -->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>Login</h1>
+            <form method="POST" action="{{ url_for('login') }}">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit"><a href="com.html">Login</a></button>
+
+            <div class="social-login">
+                <h2>Or</h2>
+                <button class="button google">Login with Google</button>
+                <button class="button facebook">Login with Facebook</button>
+            </div>
+
+            <p class="signup-link">Don’t have an account? <a href="sign.html">Sign up</a></p>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

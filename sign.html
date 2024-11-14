@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up and Login Form</title>
+    <link rel="stylesheet" href="sign.css">
+    <script src="script.js"></script>  
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>Sign Up</h1>
+            <form action="#">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Name" required>
+
+                <label for="ph">Phone</label>
+                <input id="ph" type="tel" placeholder="Enter Phone" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter Email" required>
+
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter Password" required>
+
+                <label for="dob">Date of Birth</label>
+                <input id="dob" type="date" required>
+
+                <label for="gender">Gender</label>
+                <select id="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="type">You are an</label>
+                <select id="type" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="organization">Organization</option>
+                    <option value="individual">Individual</option>
+                </select>
+
+                <label for="comments">Comments</label>
+                <textarea id="comments" placeholder="Enter your comment" rows="4"></textarea>
+
+                <button type="submit"><a href="com.html">Submit</a></button>
+            </form>
+        </div>
+
+        <div class="video-container">
+            <video src="tree2.mp4" autoplay muted loop></video>
+            <div  class="login-container"><a href="login.html"><h2>Login</h2></a></p>
+                <h2>Or</h2>
+                <button class="login-btn" <img src="google.png" alt="Google Logo" class="google-logo">Login with Google</button>
+                <button class="login-btn" onclick="loginWithFacebook()">Login with Facebook</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html

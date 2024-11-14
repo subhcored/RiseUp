@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Card</title>
+    <link rel="stylesheet" href="com.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="com.c++" defer></script>
+    <script src="com.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">RiseUp</div>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#">Invest</a></li>
+                <li><a href="#">Learn</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help & Support</a></li>
+                <li><a href="#" class="btn-login" role="button">dashboard</a></li>
+                <li><a href="#" class="btn-signup" role="button">profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="stock-container">
+        <div class="stock-info">
+            <div class="stock-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoXtGha1yIOWi78BEzd-Uze_cHA2QWsPkF0Q&s" alt="Tata Motors Logo" class="stock-logo">
+                <div>
+                    <h1 class="stock-name">Tata Motors Share Price</h1>
+                    <p class="stock-symbol">TATAMOTORS</p>
+                </div>
+            </div>
+            <h2 class="stock-price">₹860.30</h2>
+            <p class="price-change">-₹15.70 (-1.78%) Today</p>
+            <p class="update-time">Last updated on 25 Oct, 2024 | 15:57 IST</p>
+            <div class="price-graph" aria-label="Price Grapp">
+                <canvas id="stockChart"></canvas>
+            </div>
+            <div class="time-range">
+                <button>1D</button>
+                <button>1W</button>
+                <button>1M</button>
+                <button>1Y</button>
+                <button>3Y</button>
+                <button>5Y</button>
+                <button>All</button>
+            </div>
+            <div class="tabs">
+                <button>News</button>
+                <button>Company Overview</button>
+                <button>Fundamentals</button>
+                <button>Events</button>
+                <button>F&O</button>
+            </div>
+        </div>
+        <div class="account-info">
+            <h3>Trusted by 1 cr+ Indians for their wealth-building needs</h3>
+            <ul>
+                <li>₹0 Account maintenance charges (AMC)</li>
+                <li>₹0 Commission on Mutual Funds and IPOs</li>
+                <li>₹20 Brokerage of up to ₹20/order on Equity and F&O</li>
+            </ul>
+            <div class="mobile-input">
+                <span>+91</span>
+                <input type="text" placeholder="Enter your mobile number">
+            </div>
+            <button class="open-account-btn" role="button">Open FREE Demat Account Now</button>
+            <p>By signing up, you agree to receive transaction updates from Upstox.</p>
+        </div>
+    </div>
+    <div class="joy">news</div>
+    <section class="investment-container">
+        <div class="investment-card">
+            <img src="https://img.freepik.com/premium-photo/renewable-energy-landscape_43969-30212.jpg?semt=ais_hybrid" alt="Green Energy Project" class="investment-image">
+            <div class="investment-details">
+                <h3>Green Energy Project</h3>
+                <p>ROI: <span style="color: #00e676;">10%</span></p>
+                <p>Investment Range: $5,000 - $15,000</p>
+                <p>Impact: High - Focus on sustainable energy</p>
+                <a href="#" class="btn-invest">Invest Now</a>
+            </div>
+        </div>
+    
+        <div class="investment-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoXtGha1yIOWi78BEzd-Uze_cHA2QWsPkF0Q&s" alt="Solar Expansion Project" class="investment-image">
+            <div class="investment-details">
+                <h3>Solar Expansion Project</h3>
+                <p>ROI: <span style="color: #00e676;">12%</span></p>
+                <p>Investment Range: $10,000 - $20,000</p>
+                <p>Impact: Medium - Solar infrastructure</p>
+                <a href="#" class="btn-invest">Invest Now</a>
+            </div>
+        </div>
+    
+        <div class="investment-card">
+            <img src="https://i.ytimg.com/vi/JXYkjHKakGE/maxresdefault.jpg" alt="Wind Energy Project" class="investment-image">
+            <div class="investment-details">
+                <h3>Wind Energy Project</h3>
+                <p>ROI: <span style="color: #00e676;">15%</span></p>
+                <p>Investment Range: $8,000 - $25,000</p>
+                <p>Impact: High - Renewable energy focus</p>
+                <a href="#" class="btn-invest">Invest Now</a>
+            </div>
+        </div>
+    
+        <div class="investment-card">
+            <img src="https://img.freepik.com/premium-photo/solar-panel-installation_1194-1979.jpg" alt="Solar Panel Initiative" class="investment-image">
+            <div class="investment-details">
+                <h3>Solar Panel Initiative</h3>
+                <p>ROI: <span style="color: #00e676;">9%</span></p>
+                <p>Investment Range: $5,000 - $10,000</p>
+                <p>Impact: Medium - Solar energy accessibility</p>
+                <a href="#" class="btn-invest">Invest Now</a>
+            </div>
+        </div>
+    
+        <div class="investment-card">
+            <img src="https://th.bing.com/th/id/OIP.mmS_x6TTmBfRjpB5VmtXqQHaE8?rs=1&pid=ImgDetMain" alt="Biomass Energy Project" class="investment-image">
+            <div class="investment-details">
+                <h3>Biomass Energy Project</h3>
+                <p>ROI: <span style="color: #00e676;">11%</span></p>
+                <p>Investment Range: $7,000 - $18,000</p>
+                <p>Impact: High - Sustainable waste management</p>
+                <a href="#" class="btn-invest">Invest Now</a>
+            </div>
+        </div>
+    
+        <div class="investment-card">
+            <img src="https://th.bing.com/th/id/OIP.TCeKwe2lyrl9-c3WrBoZuwHaFj?rs=1&pid=ImgDetMain" alt="Geothermal Energy Project" class="investment-image">
+            <div class="investment-details">
+                <h3>Geothermal Energy Project</h3>
+                <p>ROI: <span style="color: #00e676;">14%</span></p>
+                <p>Investment Range: $15,000 - $30,000</p>
+                <p>Impact: High - Clean energy source</p>
+                <a href="#" class="btn-invest">Invest Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <div class="pro">Projects to invest</div>
+    <section class="investment-container">
+        <div class="investment-card">
+            <img src="https://img.freepik.com/premium-photo/renewable-energy-landscape_43969-30212.jpg?semt=ais_hybrid" alt="Project 1 Image" class="investment-image">
+            <div class="investment-details">
+                <h3>Green Energy Project</h3>
+                <p>ROI: <span style="color: #00e676;">10%</span></p>
+                <p>Investment Range: $5,000 - $15,000</p>
+                <p>Impact: High - Focus on sustainable energy</p>
+                <a href="#" class="btn-invest">Invest Now</a>
+            </div>
+        </div>
+    
+        <div class="investment-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoXtGha1yIOWi78BEzd-Uze_cHA2QWsPkF0Q&s" alt="Project 2 Image" class="investment-image">
+            <div class="investment-details">
+                <h3>Solar Expansion Project</h3>
+                <p>ROI: <span style="color: #00e676;">12%</span></p>
+                <p>Investment Range: $10,000 - $20,000</p>
+                <p>Impact: Medium - Solar infrastructure</p>
+                <a href="#" class="btn-invest">Invest Now</a>
+            </div>
+        </div>
+    </section>
+    <!-- Investment Modal -->
+<div id="investmentModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Investment Details</h2>
+        <p>Thank you for your interest in investing! Please provide your details below:</p>
+        <form id="investmentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="content-box">
+        <h2>Tata Motors</h2>
+        <p>A shining light in India’s automobile industry, Tata Motors is a key component of the Tata Group. Tata Motors has a market capitalisation of ₹2.39 lakh crore as of December 11, 2023. Tata Motors share price has surged more than 303% in the last three years.</p>
+        <p>Both in terms of revenue and market capitalisation, Tata Motors is the largest automobile manufacturer in India.</p>
+        <p>Tata Motors manufactures a wide range of cars, trucks, buses, and defence vehicles. The auto giant produces luxury SUVs under the iconic British brand Jaguar Land Rover. Tata Motors produces commercial vehicles through its South Korean subsidiary Tata Daewoo and wholly owned subsidiary Tata Marcopolo Motors Limited.</p>
+        <p>The automaker also manufactures a range of defence vehicles, including the Tata Kestrel and the Tata Safari Storme 4x4.</p>
+        <p>Tata Motors is the world's third-largest manufacturer of commercial vehicles. It has a strong presence in India, with a market share of over 50% in the commercial vehicles segment. The company also has a growing presence in international markets, with operations in over 175 countries.</p>
+        <p>The company has been at the forefront of innovation, developing a range of electric vehicles such as Tiago EV and Nexon EV.</p>
+        <p>Outside India, the Tata Group company has operations in the United Kingdom, South Korea, Thailand, South Africa and Indonesia.</p>
+
+        <h3>Tata Motors Business Segments</h3>
+        <ul>
+            <li><strong>Jaguar Land Rover:</strong> JLR is a British luxury car manufacturer owned by Tata Motors and it offers a range of luxury cars and SUVs, including the Jaguar XE, XF, and XJ, and the Land Rover Range Rover, Discovery, and Defender.</li>
+            <li><strong>Tata Daewoo:</strong> This is a South Korean commercial vehicle manufacturer owned by Tata Motors. It manufactures a range of trucks and buses which are sold in over 50 countries. The company was established after Tata Motors acquired Daewoo Commercial Vehicle Co. Ltd, a subsidiary of Daewoo Motors, in 2004.</li>
+            <li><strong>Tata Marcopolo:</strong> Tata Marcopolo Motors Limited (TMML) is a joint venture between Tata Motors and Marcopolo SA, a Brazilian bus manufacturer. The company manufactures a range of buses. In December 2020, Tata Motors acquired the remaining 49% stake from Marcopolo SA making TMML a fully owned subsidiary of the company.</li>
+        </ul>
+
+        <h3>Tata Motors Financial Highlights</h3>
+        <p>In FY 2022-23, Tata Motors reported all-time high revenue of ₹3,46,000 crore, up 24.2% year-on-year. EBITDA (Earnings before interest taxes depreciation amortisation) surged 10.7% in FY23 while EBIT margin increased 3.6%. The company’s EBITDA stood at ₹37,000 crore. Tata Motors reported profit before tax at ₹1,500 crore in FY23. The net debt for India business was the lowest in 15 years at ₹6,200 crore in FY23.</p>
+
+        <h4>Jaguar Land Rover</h4>
+        <p>Jaguar Land Rover reported total revenue of £22,809 million in FY 23 marking a year-on-year growth of 24.5%. The EBITDA for Jaguar Land Rover grew 11.3% YoY. It reported a loss of £64 million in FY23 compared to £348 million in the previous financial year.</p>
+
+        <h4>Tata Commercial Vehicles</h4>
+        <p>In FY23 revenue stood at ₹70,800 crore, up 35.4% YoY. EBITDA grew 7.4% YoY while EBIT margin increased 5.2%. The company’s profit before tax for the commercial vehicle segment stood at ₹3,200 crore in FY23. In FY23 domestic wholesales stood at 3,92,900 units registering a 21.8% growth YoY while domestic retail sales stood at 3,97,200 units, up 24.5% YoY.</p>
+
+        <h4>Tata Passenger Vehicles</h4>
+        <p>In FY23 the revenue for the passenger vehicle segment of the company stood at ₹47,900 crore, up 51.9% YoY. The profit before tax stood at ₹700 crore. In FY23 passenger vehicles domestic wholesales stood at 5,38,500 units, up 45.4% YoY while the domestic retail sales grew 44.2% YoY at 5,23,500 units.</p>
+    </div>
+</div>
+
+    
+</body>
+</html>
